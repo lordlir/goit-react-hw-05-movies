@@ -1,0 +1,9 @@
+.hesder {
+  width: 200px;
+}
+.nav_link {
+  color: rgb(3, 3, 84);
+}
+.nav_link_active {
+  color: goldenrod;
+}
