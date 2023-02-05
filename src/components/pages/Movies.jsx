@@ -14,7 +14,7 @@ const Movies = ({ movies }) => {
             to={`${routes.MOVIES}/${id}`}
             state={{ prevLocationPath: pathname + search }}
           >
-            <img src={`${urlImg + poster_path}`} width="50" />
+            <img src={`${urlImg + poster_path}`} alt="poster" width="50" />
             {original_title}
           </NavLink>
         </li>
