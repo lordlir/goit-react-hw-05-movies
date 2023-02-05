@@ -11,8 +11,8 @@ const Home = props => {
 
   const getTopMovies = async () => {
     try {
-      const response = await dataMovies();
-      setMoviesTop(response.data.results);
+      const data = await dataMovies();
+      setMoviesTop(data.results);
     } catch (error) {
       console.log(error);
     } finally {

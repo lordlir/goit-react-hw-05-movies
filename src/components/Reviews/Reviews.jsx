@@ -9,8 +9,8 @@ const Reviews = props => {
 
   const getDataReviews = async id => {
     try {
-      const response = await dataReviews(id);
-      setReviews(response.data.results);
+      const data = await dataReviews(id);
+      setReviews(data.results);
     } catch (error) {
       console.log(error);
     } finally {

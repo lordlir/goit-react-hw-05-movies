@@ -11,8 +11,8 @@ const MovieDetails = props => {
 
   const getDataDetails = async id => {
     try {
-      const response = await dataDetails(id);
-      setMovie(response.data);
+      const data = await dataDetails(id);
+      setMovie(data);
     } catch (error) {
       console.log(error);
     } finally {

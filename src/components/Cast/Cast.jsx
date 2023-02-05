@@ -12,8 +12,8 @@ const Cast = props => {
 
   const getDataCast = async id => {
     try {
-      const response = await dataCast(id);
-      setMovieCast(response.data.cast);
+      const data = await dataCast(id);
+      setMovieCast(data.cast);
     } catch (error) {
       console.log(error);
     } finally {

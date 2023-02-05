@@ -6,12 +6,12 @@ axios.defaults.baseURL = BASE_URL;
 
 export const dataMovies = async (time_window = 'day') => {
   try {
-    const response = await axios.get(`/trending/movie/${time_window}`, {
+    const { data } = await axios.get(`/trending/movie/${time_window}`, {
       params: {
         api_key: KEY_API,
       },
     });
-    return response;
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -19,13 +19,13 @@ export const dataMovies = async (time_window = 'day') => {
 
 export const dataSearch = async queryValue => {
   try {
-    const response = await axios.get(`/search/movie`, {
+    const { data } = await axios.get(`/search/movie`, {
       params: {
         api_key: KEY_API,
         query: queryValue,
       },
     });
-    return response;
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -33,12 +33,12 @@ export const dataSearch = async queryValue => {
 
 export const dataDetails = async movie_id => {
   try {
-    const response = await axios.get(`/movie/${movie_id}`, {
+    const { data } = await axios.get(`/movie/${movie_id}`, {
       params: {
         api_key: KEY_API,
       },
     });
-    return response;
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -46,12 +46,12 @@ export const dataDetails = async movie_id => {
 
 export const dataCast = async movie_id => {
   try {
-    const response = await axios.get(`/movie/${movie_id}/credits`, {
+    const { data } = await axios.get(`/movie/${movie_id}/credits`, {
       params: {
         api_key: KEY_API,
       },
     });
-    return response;
+    return data;
   } catch (error) {
     console.error(error);
   }
@@ -59,12 +59,12 @@ export const dataCast = async movie_id => {
 
 export const dataReviews = async movie_id => {
   try {
-    const response = await axios.get(`/movie/${movie_id}/reviews`, {
+    const { data } = await axios.get(`/movie/${movie_id}/reviews`, {
       params: {
         api_key: KEY_API,
       },
     });
-    return response;
+    return data;
   } catch (error) {
     console.error(error);
   }
